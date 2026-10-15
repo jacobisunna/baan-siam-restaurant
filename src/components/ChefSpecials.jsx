@@ -69,7 +69,7 @@ export const ChefSpecials = () => {
                     </span>
                   )}
                   {soldOut && (
-                    <span className="px-3 py-1 rounded-full bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-xs shadow-md">
+                    <span className="px-3 py-1 rounded-2xl bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-xs shadow-md">
                       {soldOutLabel(dish)}
                     </span>
                   )}
@@ -136,7 +136,7 @@ export const ChefSpecials = () => {
                   {soldOut ? (
                     <button
                       disabled
-                      className="px-4 py-2 rounded-full bg-stone-800 text-stone-400 border border-stone-700 font-bold text-xs flex items-center gap-1.5 cursor-not-allowed"
+                      className="px-4 py-2 rounded-full bg-stone-800 text-stone-400 border border-stone-700 font-bold text-xs whitespace-nowrap flex items-center gap-1.5 cursor-not-allowed"
                     >
                       <span>Sold out</span>
                     </button>

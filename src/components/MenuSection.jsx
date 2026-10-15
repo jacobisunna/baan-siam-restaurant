@@ -254,8 +254,8 @@ export const MenuSection = () => {
 
                   {/* Sold Out / Popular Badge */}
                   {soldOut ? (
-                    <div className="absolute top-3 left-3 max-w-[70%]">
-                      <span className="inline-block px-2.5 py-0.5 rounded-full bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-[10px] uppercase tracking-wider shadow">
+                    <div className="absolute top-3 left-3 right-24">
+                      <span className="inline-block px-2.5 py-0.5 rounded-2xl bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-[10px] uppercase tracking-wider shadow">
                         {soldOutLabel(dish)}
                       </span>
                     </div>
@@ -338,7 +338,7 @@ export const MenuSection = () => {
                       {soldOut ? (
                         <button
                           disabled
-                          className="px-3.5 py-1.5 rounded-full bg-stone-800 text-stone-400 border border-stone-700 font-bold text-xs flex items-center gap-1 cursor-not-allowed"
+                          className="px-3.5 py-1.5 rounded-full bg-stone-800 text-stone-400 border border-stone-700 font-bold text-xs whitespace-nowrap flex items-center gap-1 cursor-not-allowed"
                         >
                           <span>Sold out</span>
                         </button>

@@ -68,7 +68,7 @@ export const DishDetailModal = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0e1d16] via-transparent to-black/30" />
             {soldOut && (
               <div className="absolute top-4 left-4 right-16">
-                <span className="inline-block px-3 py-1 rounded-full bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-xs uppercase tracking-wider shadow">
+                <span className="inline-block px-3 py-1 rounded-2xl bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-xs uppercase tracking-wider shadow">
                   {soldOutLabel(selectedDish)}
                 </span>
               </div>
