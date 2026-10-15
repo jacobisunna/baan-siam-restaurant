@@ -71,7 +71,7 @@ export const CartProvider = ({ children }) => {
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const tax = subtotal * 0.1025; // standard WA tax
+  const tax = subtotal * 0.1025; // estimated Los Angeles sales tax
   const total = subtotal + tax;
 
   return (

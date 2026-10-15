@@ -40,7 +40,7 @@ function App() {
           {/* Michelin Guide & Guest Reviews */}
           <ReviewsSection />
 
-          {/* Location, Hours, Interactive Map & Valet Info */}
+          {/* Location, Hours, Interactive Map & Parking Info */}
           <LocationHours />
         </main>
 

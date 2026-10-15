@@ -27,13 +27,13 @@ An authentic, high-fidelity responsive website for **Baan Siam**, an upscale yet
   - Slide-out order drawer with pickup (25-30m) vs. delivery (40-50m) toggle
   - Custom spice levels preserved per item
   - Promo code simulator (Try `THAI10` or `SAWASDEE`)
-  - Subtotal, WA tax calculation, and simulated checkout flow with confetti celebration
+  - Subtotal, estimated Los Angeles sales tax, and simulated checkout flow with confetti celebration
 - **Table Reservation Engine**:
   - Multi-step booking modal (Date, Time slots, Party size, Seating area preference)
   - Seating options: Main Royal Dining, Jasmine Garden Courtyard, Chef's Wok Counter, Romantic Booth
   - Instant booking confirmation with reference code and confetti
 - **Accolades & Reviews**: Michelin Guide selected badges and quotes from food critics and diners.
-- **Location, Hours & Parking**: Interactive map card, lunch & dinner service hours, and valet parking information.
+- **Location, Hours & Parking**: Interactive map card, lunch & dinner service hours, and Thai Town parking and transit information.
 
 ---
 

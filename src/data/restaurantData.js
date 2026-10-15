@@ -3,8 +3,8 @@ export const restaurantInfo = {
   thaiName: "บ้านสยาม",
   tagline: "Authentic Royal Thai Cuisine & Warm Siam Hospitality",
   description: "Experience the harmonious balance of sweet, sour, salty, and spicy. Crafted with heritage recipes from Bangkok and the Royal Palaces of Siam, paired with heartfelt hospitality that makes every guest feel like cherished family.",
-  address: "428 Siam Boulevard, Suite 100, Seattle, WA 98101",
-  phone: "(206) 555-7426",
+  address: "428 Siam Boulevard, Thai Town, Los Angeles, CA 90027",
+  phone: "(323) 555-0142",
   email: "sawasdee@baansiamrestaurant.com",
   hours: [
     { days: "Monday – Thursday", lunch: "11:30 AM – 3:00 PM", dinner: "4:30 PM – 10:00 PM" },
@@ -14,7 +14,7 @@ export const restaurantInfo = {
   ],
   awards: [
     { title: "Michelin Guide Selected", year: "2024 & 2025" },
-    { title: "Best Thai Restaurant", org: "Pacific Northwest Dining Awards" },
+    { title: "Best Thai Restaurant", org: "LA Neighborhood Dining Awards" },
     { title: "Hospitality Excellence Award", org: "Golden Spoon Honors" }
   ]
 };
@@ -409,7 +409,7 @@ export const guestReviews = [
   {
     name: "David Chen",
     title: "Verified Gourmet Diner",
-    quote: "Hands down the best Pad Thai and Tom Yum in the Pacific Northwest. Authentic heat, fresh fragrant herbs, and the staff are genuinely the kindest, happiest team I’ve ever experienced in fine dining.",
+    quote: "Hands down the best Pad Thai and Tom Yum in Los Angeles. Authentic heat, fresh fragrant herbs, and the staff are genuinely the kindest, happiest team I’ve ever experienced in fine dining.",
     rating: 5,
     date: "January 2025"
   },

@@ -276,7 +276,7 @@ export const ReservationModal = () => {
                 <input
                   type="tel"
                   required
-                  placeholder="(206) 555-0199"
+                  placeholder="(323) 555-0199"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full bg-[#12241b] border border-stone-800 rounded-xl px-3 py-2 text-xs text-stone-200 focus:outline-none focus:border-[#c59b27]"

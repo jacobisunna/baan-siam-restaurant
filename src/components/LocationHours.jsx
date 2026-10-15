@@ -28,7 +28,7 @@ export const LocationHours = () => {
             Visit <span className="gold-gradient-text">Baan Siam</span>
           </h2>
           <p className="text-stone-300 text-base sm:text-lg font-light leading-relaxed">
-            Conveniently situated in downtown with complimentary valet dining parking, a garden courtyard, and private banquet salons.
+            Tucked into the heart of Thai Town in East Hollywood, with validated parking, a garden courtyard, and private banquet salons.
           </p>
         </div>
 
@@ -86,9 +86,9 @@ export const LocationHours = () => {
                 <div className="flex items-start gap-3 text-xs sm:text-sm">
                   <Car className="w-4 h-4 text-[#c59b27] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block font-medium">Parking & Valet</strong>
+                    <strong className="text-white block font-medium">Parking & Transit</strong>
                     <span className="text-stone-300">
-                      Complimentary evening valet parking Thursday – Sunday. 2-hour garage validation anytime.
+                      Free 2-hour validated parking in our rear lot, plus metered street parking nearby. A short walk from the Metro B Line Hollywood/Western station.
                     </span>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export const LocationHours = () => {
                   <span>Open in Google Maps</span>
                 </a>
                 <span className="text-[11px] text-[#f3e5ab] bg-black/70 px-3 py-1 rounded-full border border-white/10">
-                  Downtown Arts District
+                  Thai Town · East Hollywood
                 </span>
               </div>
             </div>
