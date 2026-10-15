@@ -325,7 +325,7 @@ export const CartDrawer = () => {
                       </div>
                     )}
                     <div className="flex justify-between">
-                      <span>Estimated Tax (WA 10.25%)</span>
+                      <span>Estimated Tax (Los Angeles 10.25%)</span>
                       <span className="text-stone-200">${tax.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between text-sm font-serif font-bold text-white pt-2 border-t border-stone-800">

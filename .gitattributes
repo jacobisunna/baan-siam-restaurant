@@ -1,0 +1,2 @@
+# Site data is edited by people and by RestaurantBot; keep it LF everywhere so diffs stay clean.
+src/data/*.json text eol=lf

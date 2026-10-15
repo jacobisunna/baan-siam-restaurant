@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
 import { X, Flame, Plus, Check, Sparkles, AlertCircle } from 'lucide-react';
+import { isAvailableNow, soldOutLabel } from '../data/restaurantData';
 
 export const DishDetailModal = () => {
   const { selectedDish, setSelectedDish, addToCart } = useCart();
@@ -20,7 +21,10 @@ export const DishDetailModal = () => {
 
   if (!selectedDish) return null;
 
+  const soldOut = !isAvailableNow(selectedDish);
+
   const handleAdd = () => {
+    if (soldOut) return;
     for (let i = 0; i < quantity; i++) {
       addToCart(selectedDish, spiceLevel, specialInstructions);
     }
@@ -59,9 +63,16 @@ export const DishDetailModal = () => {
             <img
               src={selectedDish.image}
               alt={selectedDish.name}
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover ${soldOut ? 'grayscale opacity-70' : ''}`}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0e1d16] via-transparent to-black/30" />
+            {soldOut && (
+              <div className="absolute top-4 left-4 right-16">
+                <span className="inline-block px-3 py-1 rounded-2xl bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-xs uppercase tracking-wider shadow">
+                  {soldOutLabel(selectedDish)}
+                </span>
+              </div>
+            )}
             <div className="absolute bottom-4 left-6 right-6 flex items-end justify-between">
               <div>
                 <span className="text-xs text-[#c59b27] font-serif uppercase tracking-widest">
@@ -180,9 +191,16 @@ export const DishDetailModal = () => {
 
           <button
             onClick={handleAdd}
-            className="flex-1 py-3 px-6 rounded-full bg-gradient-to-r from-[#c59b27] to-[#aa771c] hover:brightness-110 active:scale-95 text-stone-950 font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#c59b27]/20 cursor-pointer"
+            disabled={soldOut}
+            className={`flex-1 py-3 px-6 rounded-full font-bold text-sm transition-all flex items-center justify-center gap-2 ${
+              soldOut
+                ? 'bg-stone-800 text-stone-400 border border-stone-700 cursor-not-allowed'
+                : 'bg-gradient-to-r from-[#c59b27] to-[#aa771c] hover:brightness-110 active:scale-95 text-stone-950 shadow-lg shadow-[#c59b27]/20 cursor-pointer'
+            }`}
           >
-            {addedAnimation ? (
+            {soldOut ? (
+              <span>{soldOutLabel(selectedDish)}</span>
+            ) : addedAnimation ? (
               <>
                 <Check className="w-4 h-4 text-stone-950" />
                 <span>Added to Order!</span>

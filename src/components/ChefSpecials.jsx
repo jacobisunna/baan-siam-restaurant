@@ -1,15 +1,18 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
-import { menuItems } from '../data/restaurantData';
+import { menuItems, activeSpecials, isAvailableNow, laToday, soldOutLabel } from '../data/restaurantData';
 import { Crown, Flame, Plus, Sparkles, Eye } from 'lucide-react';
 
 export const ChefSpecials = () => {
   const { addToCart, setSelectedDish } = useCart();
-  
-  // Filter for signatures or special picks
-  const specials = menuItems.filter(
-    (item) => item.category === 'signatures' || item.popular
-  ).slice(0, 3);
+  const today = laToday();
+
+  // Dishes with a running special (menu.json "special") lead, then signatures or popular picks fill the row
+  const runningSpecials = activeSpecials(today);
+  const signaturePicks = menuItems.filter(
+    (item) => (item.category === 'signatures' || item.popular) && !runningSpecials.includes(item)
+  );
+  const specials = [...runningSpecials, ...signaturePicks].slice(0, Math.max(3, runningSpecials.length));
 
   return (
     <section id="signatures" className="py-24 bg-[#0a1510] relative border-t border-stone-800">
@@ -30,27 +33,46 @@ export const ChefSpecials = () => {
 
         {/* Featured Dish Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {specials.map((dish) => (
+          {specials.map((dish) => {
+            const isSpecial = runningSpecials.includes(dish);
+            const soldOut = !isAvailableNow(dish, today);
+            return (
             <div
               key={dish.id}
-              className="group bg-[#0e1d16] rounded-3xl overflow-hidden border border-stone-800 hover:border-[#c59b27]/70 transition-all duration-300 hover:shadow-2xl hover:shadow-[#c59b27]/15 flex flex-col justify-between"
+              className={`group bg-[#0e1d16] rounded-3xl overflow-hidden border border-stone-800 hover:border-[#c59b27]/70 transition-all duration-300 hover:shadow-2xl hover:shadow-[#c59b27]/15 flex flex-col justify-between ${
+                soldOut ? 'opacity-70' : ''
+              }`}
             >
               {/* Dish Photo with Zoom on Hover */}
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-900 cursor-pointer" onClick={() => setSelectedDish(dish)}>
                 <img
                   src={dish.image}
                   alt={dish.name}
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 group-hover:brightness-105"
+                  className={`w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 group-hover:brightness-105 ${
+                    soldOut ? 'grayscale' : ''
+                  }`}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0e1d16] via-transparent to-black/30" />
-                
+
                 {/* Badges Overlay */}
-                <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
-                  <span className="px-3 py-1 rounded-full bg-[#c59b27] text-stone-950 font-bold text-xs shadow-md flex items-center gap-1">
-                    <Crown className="w-3 h-3" />
-                    Signature
-                  </span>
+                <div className="absolute top-4 left-4 right-24 flex flex-wrap gap-1.5">
+                  {isSpecial ? (
+                    <span className="px-3 py-1 rounded-full bg-[#f3e5ab] text-stone-950 font-bold text-xs shadow-md flex items-center gap-1">
+                      <Sparkles className="w-3 h-3" />
+                      {dish.special.label}
+                    </span>
+                  ) : (
+                    <span className="px-3 py-1 rounded-full bg-[#c59b27] text-stone-950 font-bold text-xs shadow-md flex items-center gap-1">
+                      <Crown className="w-3 h-3" />
+                      Signature
+                    </span>
+                  )}
+                  {soldOut && (
+                    <span className="px-3 py-1 rounded-2xl bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-xs shadow-md">
+                      {soldOutLabel(dish)}
+                    </span>
+                  )}
                 </div>
 
                 <div className="absolute top-4 right-4">
@@ -111,17 +133,27 @@ export const ChefSpecials = () => {
                     ))}
                   </div>
 
-                  <button
-                    onClick={() => addToCart(dish)}
-                    className="px-4 py-2 rounded-full bg-gradient-to-r from-[#c59b27] to-[#aa771c] hover:brightness-110 active:scale-95 text-stone-950 font-bold text-xs transition-all flex items-center gap-1.5 shadow-md shadow-[#c59b27]/20 cursor-pointer"
-                  >
-                    <Plus className="w-3.5 h-3.5" />
-                    <span>Add to Order</span>
-                  </button>
+                  {soldOut ? (
+                    <button
+                      disabled
+                      className="px-4 py-2 rounded-full bg-stone-800 text-stone-400 border border-stone-700 font-bold text-xs whitespace-nowrap flex items-center gap-1.5 cursor-not-allowed"
+                    >
+                      <span>Sold out</span>
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => addToCart(dish)}
+                      className="px-4 py-2 rounded-full bg-gradient-to-r from-[#c59b27] to-[#aa771c] hover:brightness-110 active:scale-95 text-stone-950 font-bold text-xs transition-all flex items-center gap-1.5 shadow-md shadow-[#c59b27]/20 cursor-pointer"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      <span>Add to Order</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

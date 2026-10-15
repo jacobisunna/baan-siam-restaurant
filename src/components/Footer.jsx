@@ -155,7 +155,7 @@ export const Footer = () => {
                 <a href={`mailto:${restaurantInfo.email}`} className="text-stone-400 hover:text-[#c59b27] transition-colors">Private Dining & Buyouts</a>
               </li>
               <li>
-                <a href="#location" className="text-stone-400 hover:text-[#c59b27] transition-colors">Valet Parking & Directions</a>
+                <a href="#location" className="text-stone-400 hover:text-[#c59b27] transition-colors">Parking & Directions</a>
               </li>
             </ul>
           </div>
@@ -186,6 +186,9 @@ export const Footer = () => {
             <span>for authentic culinary lovers · Ready for GitHub & Vercel</span>
           </div>
         </div>
+        <p className="pt-4 text-center text-[11px] text-stone-600">
+          Baan Siam is a fictional restaurant created for a RestaurantBot demo.
+        </p>
       </div>
     </footer>
   );

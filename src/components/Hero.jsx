@@ -5,9 +5,11 @@ import { restaurantInfo } from '../data/restaurantData';
 
 export const Hero = () => {
   const { setIsReservationOpen } = useCart();
+  // The first award in the data is the headline accolade shown in the hero.
+  const headlineAward = restaurantInfo.awards[0];
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-[92vh] flex items-center justify-center pt-[calc(6rem_+_var(--announcement-h,0px))] pb-16 overflow-hidden">
       {/* Background Image with Cinematic Dark Gradient */}
       <div className="absolute inset-0 z-0">
         <img
@@ -24,7 +26,7 @@ export const Hero = () => {
         {/* Top Recognition Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#122b1e]/90 border border-[#c59b27]/50 text-[#f3e5ab] text-xs sm:text-sm font-medium mb-6 shadow-lg shadow-black/40 backdrop-blur-md">
           <Award className="w-4 h-4 text-[#c59b27]" />
-          <span>Michelin Guide Selected 2024 & 2025</span>
+          <span>{headlineAward.title} {headlineAward.year}</span>
           <span className="text-stone-500">|</span>
           <span className="text-stone-300">Authentic Royal Thai Flavors</span>
         </div>
@@ -80,8 +82,8 @@ export const Hero = () => {
 
           <div className="p-3 sm:p-4 rounded-xl bg-[#0f2219]/60 border border-stone-800/80 backdrop-blur-sm text-center">
             <Award className="w-5 h-5 text-[#c59b27] mx-auto mb-1.5" />
-            <h4 className="text-xs sm:text-sm font-semibold text-white">Michelin Guide</h4>
-            <p className="text-[11px] text-stone-400 mt-0.5">Recognized 2024-2025</p>
+            <h4 className="text-xs sm:text-sm font-semibold text-white">{headlineAward.org || headlineAward.title}</h4>
+            <p className="text-[11px] text-stone-400 mt-0.5">Recognized {headlineAward.year}</p>
           </div>
 
           <div className="p-3 sm:p-4 rounded-xl bg-[#0f2219]/60 border border-stone-800/80 backdrop-blur-sm text-center">

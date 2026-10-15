@@ -27,13 +27,13 @@ An authentic, high-fidelity responsive website for **Baan Siam**, an upscale yet
   - Slide-out order drawer with pickup (25-30m) vs. delivery (40-50m) toggle
   - Custom spice levels preserved per item
   - Promo code simulator (Try `THAI10` or `SAWASDEE`)
-  - Subtotal, WA tax calculation, and simulated checkout flow with confetti celebration
+  - Subtotal, estimated Los Angeles sales tax, and simulated checkout flow with confetti celebration
 - **Table Reservation Engine**:
   - Multi-step booking modal (Date, Time slots, Party size, Seating area preference)
   - Seating options: Main Royal Dining, Jasmine Garden Courtyard, Chef's Wok Counter, Romantic Booth
   - Instant booking confirmation with reference code and confetti
-- **Accolades & Reviews**: Michelin Guide selected badges and quotes from food critics and diners.
-- **Location, Hours & Parking**: Interactive map card, lunch & dinner service hours, and valet parking information.
+- **Accolades & Reviews**: Fictional accolade badges (e.g. "Siam Table Guide: Recommended") and quotes from food critics and diners.
+- **Location, Hours & Parking**: Interactive map card, lunch & dinner service hours, and Thai Town parking and transit information.
 
 ---
 
@@ -59,6 +59,27 @@ npm run dev
 # 3. Build for production
 npm run build
 ```
+
+---
+
+## 🤖 Data files and the RestaurantBot
+
+Baan Siam is a fictional restaurant used to demo RestaurantBot, an assistant that lets the owner update the website by text message. All editable content lives in JSON files, so a change like "86 the crab fried rice tonight" becomes a small, reviewable data edit instead of a code change:
+
+| File | Contents |
+| --- | --- |
+| `src/data/menu.json` | Menu categories and dishes. Each dish has a permanent `slug` and `posId` plus `available`, `hidden`, optional `unavailableNote` / `unavailableUntil` (sold out) and optional `special` (`label`, `startDate`, `endDate`). |
+| `src/data/site.json` | Restaurant details (address, phone, email, hours), awards, hospitality team and guest reviews. |
+| `src/data/announcements.json` | Dismissible banners shown above the navigation (`info`, `promo` or `alert`), with optional start and end dates. |
+
+`src/data/restaurantData.js` reads these files and keeps the exports the components already use. Dates are evaluated in Los Angeles time.
+
+```bash
+npm run validate   # check the data files (ids, slugs, posIds, prices, dates, required fields)
+npm run verify     # validate, then build; run before every commit
+```
+
+Each build also publishes `/menu.json` and `/site-info.json` (commit SHA, branch, build time) so a deployment can be checked against the commit it should be serving. The editing rules for people and bots (never rename a `slug` or `posId`, hide dishes instead of deleting them, protected files, formatting) are in [`CLAUDE.md`](./CLAUDE.md).
 
 ---
 

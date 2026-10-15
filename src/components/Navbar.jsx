@@ -36,7 +36,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`relative transition-all duration-300 ${
         isScrolled
           ? 'bg-[#081812]/95 backdrop-blur-md border-b border-[#c59b27]/20 shadow-xl py-3'
           : 'bg-gradient-to-b from-[#081812]/90 via-[#081812]/50 to-transparent py-5'

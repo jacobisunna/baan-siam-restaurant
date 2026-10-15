@@ -1,5 +1,6 @@
 import React from 'react';
 import { CartProvider } from './context/CartContext';
+import { AnnouncementBar } from './components/AnnouncementBar';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { StorySection } from './components/StorySection';
@@ -17,8 +18,11 @@ function App() {
   return (
     <CartProvider>
       <div className="min-h-screen bg-[#0c1410] text-stone-200 selection:bg-[#c59b27] selection:text-black flex flex-col">
-        {/* Sticky luxury Navigation Bar */}
-        <Navbar />
+        {/* Fixed header: RestaurantBot announcements above the luxury Navigation Bar */}
+        <div className="fixed top-0 left-0 right-0 z-40">
+          <AnnouncementBar />
+          <Navbar />
+        </div>
 
         {/* Main Content Area */}
         <main className="flex-1">
@@ -37,10 +41,10 @@ function App() {
           {/* Complete Categorized Menu with Filters & Search */}
           <MenuSection />
 
-          {/* Michelin Guide & Guest Reviews */}
+          {/* Accolades & Guest Reviews */}
           <ReviewsSection />
 
-          {/* Location, Hours, Interactive Map & Valet Info */}
+          {/* Location, Hours, Interactive Map & Parking Info */}
           <LocationHours />
         </main>
 
