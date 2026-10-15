@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "restaurant": {
+    "name": "Baan Siam",
+    "thaiName": "บ้านสยาม",
+    "tagline": "Authentic Royal Thai Cuisine & Warm Siam Hospitality",
+    "description": "Experience the harmonious balance of sweet, sour, salty, and spicy. Crafted with heritage recipes from Bangkok and the Royal Palaces of Siam, paired with heartfelt hospitality that makes every guest feel like cherished family.",
+    "address": "428 Siam Boulevard, Thai Town, Los Angeles, CA 90027",
+    "phone": "(323) 555-0142",
+    "email": "sawasdee@baansiamrestaurant.com",
+    "hours": [
+      {
+        "days": "Monday – Thursday",
+        "lunch": "11:30 AM – 3:00 PM",
+        "dinner": "4:30 PM – 10:00 PM"
+      },
+      {
+        "days": "Friday",
+        "lunch": "11:30 AM – 3:00 PM",
+        "dinner": "4:30 PM – 11:00 PM"
+      },
+      {
+        "days": "Saturday",
+        "lunch": "12:00 PM – 3:30 PM",
+        "dinner": "4:30 PM – 11:00 PM"
+      },
+      {
+        "days": "Sunday",
+        "lunch": "12:00 PM – 3:30 PM",
+        "dinner": "4:30 PM – 9:30 PM"
+      }
+    ]
+  },
+  "awards": [
+    {
+      "title": "Siam Table Guide: Recommended",
+      "org": "Siam Table Guide",
+      "year": "2024 & 2025"
+    },
+    {
+      "title": "Best Thai Restaurant",
+      "org": "LA Neighborhood Dining Awards"
+    },
+    {
+      "title": "Hospitality Excellence Award",
+      "org": "Golden Spoon Honors"
+    }
+  ],
+  "hospitalityTeam": [
+    {
+      "name": "Somchai & Mali Prasert",
+      "role": "Executive Chef & Founder",
+      "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=85",
+      "bio": "Trained in the culinary arts of royal Bangkok cuisine, Chef Somchai brings 25 years of devotion to authentic mortar-and-pestle curry pastes and aromatic wok mastery."
+    },
+    {
+      "name": "Sunisa & Anong",
+      "role": "Head Hosts & Guest Relations",
+      "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=85",
+      "bio": "Greets every guest with the traditional Thai 'Wai' and a radiant smile. To Sunisa, every guest entering Baan Siam is treated like a beloved family member visiting home."
+    },
+    {
+      "name": "Kavin & The Service Family",
+      "role": "Senior Floor Captain & Servers",
+      "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=85",
+      "bio": "Known across the city for cheerful, anticipatory service, vibrant cocktail recommendations, and an infectious warmth that brightens your dining experience."
+    },
+    {
+      "name": "Chaiyaporn 'Chai'",
+      "role": "Beverage Director & Master Mixologist",
+      "image": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=85",
+      "bio": "Crafting Thai-botanical syrups, smoked lemongrass infusions, and refreshing butterfly pea elixirs to elevate each flavorful bite."
+    }
+  ],
+  "guestReviews": [
+    {
+      "name": "Sophia Montgomery",
+      "title": "Food & Wine Critic",
+      "quote": "The Massaman Lamb Shank is a masterclass in slow reduction, but what will bring me back again and again is the dazzling, heartwarming smile of the servers. You feel like royalty from the moment you step through the teakwood doors.",
+      "rating": 5,
+      "date": "February 2025"
+    },
+    {
+      "name": "David Chen",
+      "title": "Verified Gourmet Diner",
+      "quote": "Hands down the best Pad Thai and Tom Yum in Los Angeles. Authentic heat, fresh fragrant herbs, and the staff are genuinely the kindest, happiest team I’ve ever experienced in fine dining.",
+      "rating": 5,
+      "date": "January 2025"
+    },
+    {
+      "name": "Elena Rostova",
+      "title": "Private Event Host",
+      "quote": "We hosted our 15-person anniversary dinner in the Courtyard. The staff treated us like royalty, the craft cocktails were sublime, and every single dish was bursting with flavor.",
+      "rating": 5,
+      "date": "December 2024"
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "all",
+      "name": "Full Menu",
+      "icon": "Utensils"
+    },
+    {
+      "id": "starters",
+      "name": "Starters & Small Plates",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "soups",
+      "name": "Soups & Fresh Salads",
+      "icon": "Soup"
+    },
+    {
+      "id": "curries",
+      "name": "Royal Curries",
+      "icon": "Flame"
+    },
+    {
+      "id": "noodles",
+      "name": "Wok & Rice Noodles",
+      "icon": "ChefHat"
+    },
+    {
+      "id": "signatures",
+      "name": "Chef's Signatures",
+      "icon": "Crown"
+    },
+    {
+      "id": "desserts",
+      "name": "Artisanal Desserts",
+      "icon": "Cake"
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks & Cocktails",
+      "icon": "Wine"
+    }
+  ],
+  "items": [
+    {
+      "id": "m1",
+      "slug": "por-pia-tod",
+      "posId": "5078d9e5-0125-5529-8386-7410b87ddfc6",
+      "name": "Por Pia Tod (Golden Crispy Rolls)",
+      "thaiName": "เปาะเปี๊ยะทอด",
+      "category": "starters",
+      "price": 13.95,
+      "spiceLevel": 0,
+      "dietary": [
+        "Vegetarian",
+        "Vegan"
+      ],
+      "description": "Crispy hand-rolled pastries stuffed with glass noodles, shredded taro, shiitake mushrooms, and sweet cabbage. Served with homemade sweet organic plum-chili sauce.",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "340 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m2",
+      "slug": "chicken-satay-skewers",
+      "posId": "355abfcf-96f5-5c99-9849-746107afc1a8",
+      "name": "Chicken Satay Skewers",
+      "thaiName": "สะเต๊ะไก่",
+      "category": "starters",
+      "price": 15.5,
+      "spiceLevel": 1,
+      "dietary": [
+        "Gluten-Free",
+        "Halal"
+      ],
+      "description": "Tender chicken tenderloins steeped in turmeric, lemongrass, and coconut marinade, flame-grilled on bamboo skewers. Paired with warm rich peanut sauce and pickled cucumber relish.",
+      "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "420 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m3",
+      "slug": "thung-thong",
+      "posId": "99a8e3fe-2bc0-5e57-83e0-263f36e8a540",
+      "name": "Thung Thong (Golden Money Bags)",
+      "thaiName": "ถุงทอง",
+      "category": "starters",
+      "price": 14.95,
+      "spiceLevel": 0,
+      "dietary": [
+        "Chef's Pick"
+      ],
+      "description": "Delicate crispy wonton purses tied with green chives, packed with minced prawns, sweet water chestnuts, and fragrant cilantro root. Symbol of prosperity and joyful dining.",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "310 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m4",
+      "slug": "tod-mun-pla",
+      "posId": "ed76e0f8-cc72-5577-8d7b-86a2612fe3c1",
+      "name": "Tod Mun Pla (Thai Fish Cakes)",
+      "thaiName": "ทอดมันปลา",
+      "category": "starters",
+      "price": 14.5,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free"
+      ],
+      "description": "Wild-caught white fish pounded with red curry paste, kaffir lime ribbons, and long green beans, lightly flash-fried. Served with sweet cucumber chili relish and toasted crushed peanuts.",
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "380 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m5",
+      "slug": "tom-yum-goong-mae-nam",
+      "posId": "eb167d63-b420-5da3-8dd8-7834dfa1cbcb",
+      "name": "Tom Yum Goong Mae Nam",
+      "thaiName": "ต้มยำกุ้งแม่น้ำ",
+      "category": "soups",
+      "price": 19.95,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free",
+        "Chef's Pick"
+      ],
+      "description": "Thailand's iconic aromatic lemongrass broth simmered with colossal wild river prawns, galangal, kaffir lime leaf, straw mushrooms, and roasted chili oil with a splash of evaporated milk.",
+      "image": "https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "290 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m6",
+      "slug": "tom-kha-gai",
+      "posId": "b9f1ef79-c8ff-5db8-ba39-2b3537d9271c",
+      "name": "Tom Kha Gai (Coconut Galangal Soup)",
+      "thaiName": "ต้มข่าไก่",
+      "category": "soups",
+      "price": 18.5,
+      "spiceLevel": 1,
+      "dietary": [
+        "Gluten-Free",
+        "Halal"
+      ],
+      "description": "Silky, comforting broth of slow-simmered rich coconut cream, sliced free-range chicken, young galangal root, fresh lime juice, and oyster mushrooms garnished with cilantro.",
+      "image": "https://images.unsplash.com/photo-1548946526-f69e2424cf45?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "360 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m7",
+      "slug": "som-tum-thai",
+      "posId": "f6f67770-3cb1-5f33-af17-ad593141ba61",
+      "name": "Som Tum Thai (Artisan Papaya Salad)",
+      "thaiName": "ส้มตำไทย",
+      "category": "soups",
+      "price": 16.5,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free",
+        "Vegetarian Available"
+      ],
+      "description": "Crisp hand-shredded green papaya, snake beans, and sweet heirloom cherry tomatoes bruised in a stone mortar with bird's eye chilies, palm sugar, tamarind lime dressing, and roasted peanuts.",
+      "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "210 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m8",
+      "slug": "larb-gai-isan",
+      "posId": "2d53bda0-8ae0-5f37-bf7f-2f87b9851f26",
+      "name": "Larb Gai Isan (Spiced Herb Chicken Salad)",
+      "thaiName": "ลาบไก่",
+      "category": "soups",
+      "price": 17.5,
+      "spiceLevel": 3,
+      "dietary": [
+        "Gluten-Free",
+        "Halal"
+      ],
+      "description": "Warm minced organic chicken tossed with toasted jasmine rice powder (khao khua), fresh mint leaves, shallots, scallions, fresh lime juice, and fiery Isan dried chili flakes.",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "280 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m9",
+      "slug": "royal-massaman-lamb-shank",
+      "posId": "6b263bdb-6e0d-5ca5-92e9-a54bb1734dbb",
+      "name": "Royal Massaman Lamb Shank",
+      "thaiName": "มัสมั่นแกะ",
+      "category": "curries",
+      "price": 29.5,
+      "spiceLevel": 1,
+      "dietary": [
+        "Gluten-Free",
+        "Chef's Pick",
+        "Halal"
+      ],
+      "description": "Fall-off-the-bone 6-hour braised lamb shank in an opulent royal Massaman curry infused with cardamom, cinnamon, star anise, baby Dutch yellow potatoes, shallots, and toasted whole peanuts.",
+      "image": "https://images.unsplash.com/photo-1548946526-f69e2424cf45?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "680 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m10",
+      "slug": "gaeng-keow-wan",
+      "posId": "2c08211f-8c12-5f75-b33d-53c5d71038c3",
+      "name": "Gaeng Keow Wan (Emerald Green Curry)",
+      "thaiName": "แกงเขียวหวานไก่",
+      "category": "curries",
+      "price": 21,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free"
+      ],
+      "description": "Fragrant green curry crafted from freshly pounded green bird's eye chilies, Thai round eggplants, crisp bamboo shoots, tender chicken breast, sweet Thai basil, and coconut cream.",
+      "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "520 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m11",
+      "slug": "panang-curry-with-prime-beef",
+      "posId": "d42ad278-2cda-5dbd-aa96-c263e02993f3",
+      "name": "Panang Curry with Prime Beef",
+      "thaiName": "พะแนงเนื้อ",
+      "category": "curries",
+      "price": 23.5,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free",
+        "Halal"
+      ],
+      "description": "Thick, rich, and velvety red curry reduction infused with roasted cumin, finely slivered makrut lime leaves, sliced prime flank steak, and crushed peanuts finished with coconut swirl.",
+      "image": "https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "590 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m12",
+      "slug": "gaeng-phed-ped-yang",
+      "posId": "152f7e3d-18b5-5cfd-85da-1dc204dc16c3",
+      "name": "Pineapple Roast Duck Curry (Gaeng Phed Ped Yang)",
+      "thaiName": "แกงเผ็ดเป็ดย่าง",
+      "category": "curries",
+      "price": 26.5,
+      "spiceLevel": 2,
+      "dietary": [
+        "Chef's Pick"
+      ],
+      "description": "Succulent crispy-skin roasted duck simmered in fragrant red curry with sweet caramelized Phuket pineapple chunks, heirloom cherry tomatoes, lychee, and fresh holy basil.",
+      "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "630 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m13",
+      "slug": "pad-thai-boran",
+      "posId": "be0b0563-810d-57e6-afe2-d988ca2cd3ca",
+      "name": "Pad Thai Boran (Royal Bangkok Style)",
+      "thaiName": "ผัดไทยโบราณ",
+      "category": "noodles",
+      "price": 20.95,
+      "spiceLevel": 1,
+      "dietary": [
+        "Gluten-Free Available",
+        "Vegetarian Available"
+      ],
+      "description": "Chanthaburi rice noodles flash-fried in smoky woks with jumbo black tiger prawns, pressed pressed spiced tofu, sweet preserved radish, garlic chives, crunchy bean sprouts, and tamarind palm-sugar glaze.",
+      "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "540 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m14",
+      "slug": "pad-see-ew",
+      "posId": "b03fbfa1-86ca-53e0-a69c-a060a6e454d1",
+      "name": "Pad See Ew (Charred River Noodles)",
+      "thaiName": "ผัดซีอิ๊ว",
+      "category": "noodles",
+      "price": 19.5,
+      "spiceLevel": 0,
+      "dietary": [
+        "Vegetarian Available"
+      ],
+      "description": "Wide flat rice noodles wok-seared over high flame for deep smoky 'wok hei' aroma, tossed with tender sliced flank steak, crisp Chinese broccoli (Gai Lan), organic egg, and aged dark sweet soy sauce.",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "510 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m15",
+      "slug": "pad-kee-mao",
+      "posId": "081a2b6e-a961-5c10-8f03-97c9c0dcc0fe",
+      "name": "Pad Kee Mao (Drunken Seafood Noodles)",
+      "thaiName": "ผัดขี้เมาทะเล",
+      "category": "noodles",
+      "price": 23.5,
+      "spiceLevel": 3,
+      "dietary": [
+        "Chef's Pick"
+      ],
+      "description": "Fiery wok-tossed wide noodles with jumbo sea prawns, tender calamari, fresh green peppercorn clusters, fragrant holy basil leaves, baby corn, and crushed bird's eye chilies.",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "530 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m16",
+      "slug": "khao-pad-poo",
+      "posId": "70dbbdbd-ded4-56e1-9134-63fdb3b7179e",
+      "name": "Khao Pad Poo (Royal Lump Crab Fried Rice)",
+      "thaiName": "ข้าวผัดปู",
+      "category": "noodles",
+      "price": 25.5,
+      "spiceLevel": 0,
+      "dietary": [
+        "Gluten-Free Available"
+      ],
+      "description": "Fluffy fragrant jasmine rice stir-fried in a roaring hot wok with generous heaps of sweet Dungeness lump crab meat, organic farm eggs, green scallions, white pepper, and side Prik Nam Pla (chili fish sauce).",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "480 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m17",
+      "slug": "pla-rad-prik",
+      "posId": "388a2e96-c39c-50b1-b3a9-c249e7d35b6b",
+      "name": "Pla Rad Prik (Crispy Whole Seabass)",
+      "thaiName": "ปลากะพงราดพริก",
+      "category": "signatures",
+      "price": 36.5,
+      "spiceLevel": 2,
+      "dietary": [
+        "Chef's Pick",
+        "Gluten-Free"
+      ],
+      "description": "Crispy whole wild Mediterranean seabass drizzled in our house three-flavor caramelized sauce of tart tamarind, palm nectar, garlic, and sweet red chili reduction, crowned with flash-fried holy basil leaves.",
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "620 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m18",
+      "slug": "suea-rong-hai",
+      "posId": "048d9a71-8f55-5e5d-8854-98cc4b5d719c",
+      "name": "Suea Rong Hai (Crying Tiger Prime Ribeye)",
+      "thaiName": "เสือร้องไห้",
+      "category": "signatures",
+      "price": 34,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free",
+        "Halal"
+      ],
+      "description": "12oz USDA Prime ribeye marinated in crushed garlic, cilantro roots, and Thai spices, char-grilled to medium rare perfection. Accompanied by spicy toasted rice Nam Jim Jaew dipping sauce.",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "710 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m19",
+      "slug": "hor-mok-talay",
+      "posId": "82c8fb3e-8c19-57d6-8320-4637e95ed301",
+      "name": "Hor Mok Talay (Royal Seafood Soufflé)",
+      "thaiName": "ห่อหมกทะเล",
+      "category": "signatures",
+      "price": 27.95,
+      "spiceLevel": 2,
+      "dietary": [
+        "Gluten-Free",
+        "Chef's Pick"
+      ],
+      "description": "Aromatic mousse of wild prawns, sea scallops, and flaky fish steamed gently inside a young green coconut with red curry paste, egg, sweet basil, and thick coconut custard.",
+      "image": "https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "460 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m20",
+      "slug": "khao-niew-mamuang",
+      "posId": "c24d2124-867e-5bb0-9352-51a3314abe19",
+      "name": "Khao Niew Mamuang (Mango Sticky Rice)",
+      "thaiName": "ข้าวเหนียวมะม่วง",
+      "category": "desserts",
+      "price": 12.5,
+      "spiceLevel": 0,
+      "dietary": [
+        "Gluten-Free",
+        "Vegan",
+        "Chef's Pick"
+      ],
+      "description": "Sweet slices of golden Thai honey mango resting on warm steamed sticky rice infused with salted sweet coconut milk, sprinkled with toasted crunchy yellow mung beans.",
+      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "380 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m21",
+      "slug": "thai-tea-creme-brulee",
+      "posId": "deaa863b-91b9-5b63-bd2f-a354c83d64af",
+      "name": "Thai Tea Crème Brûlée",
+      "thaiName": "แครมบรูเล่ชาไทย",
+      "category": "desserts",
+      "price": 11.5,
+      "spiceLevel": 0,
+      "dietary": [
+        "Vegetarian"
+      ],
+      "description": "Silky custard infused with authentic Cha Tra Mue black tea leaves, star anise, and sweetened condensed milk beneath a golden, crackling caramelized sugar crust.",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "340 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m22",
+      "slug": "i-tim-kati",
+      "posId": "063c0239-eef5-5d8c-bc88-959cef8c90c1",
+      "name": "I-Tim Kati (Young Coconut Ice Cream)",
+      "thaiName": "ไอติมกะทิสด",
+      "category": "desserts",
+      "price": 10.95,
+      "spiceLevel": 0,
+      "dietary": [
+        "Gluten-Free",
+        "Vegan"
+      ],
+      "description": "House-churned dairy-free coconut milk gelato served inside a tender young coconut half shell with roasted peanuts, sweet corn kernels, and sticky palm jelly.",
+      "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "290 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m23",
+      "slug": "cha-yen",
+      "posId": "221ed6bc-6be2-565b-a8e8-22fc4d1b6f54",
+      "name": "Traditional Thai Iced Tea (Cha Yen)",
+      "thaiName": "ชาเย็น",
+      "category": "drinks",
+      "price": 6.5,
+      "spiceLevel": 0,
+      "dietary": [
+        "Vegetarian"
+      ],
+      "description": "Slow-brewed dark Thai red tea spiced with star anise and crushed cardamom pods, poured over crushed ice and topped with a luscious layer of sweet half-and-half.",
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "210 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m24",
+      "slug": "siam-orchid-passion",
+      "posId": "08a88d2e-6464-5761-94bc-abbc5784e87d",
+      "name": "Siam Orchid Passion (Craft Cocktail)",
+      "thaiName": "สยามออร์คิด",
+      "category": "drinks",
+      "price": 15,
+      "spiceLevel": 0,
+      "dietary": [
+        "Chef's Pick"
+      ],
+      "description": "Artisan botanical gin shaken with house-made lemongrass syrup, sweet lychee liqueur, fresh passionfruit puree, butterfly pea infusion, and a splash of sparkling prosecco.",
+      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=85",
+      "popular": true,
+      "calories": "190 kcal",
+      "available": true,
+      "hidden": false
+    },
+    {
+      "id": "m25",
+      "slug": "butterfly-pea-flower-herbal-cooler",
+      "posId": "f00111ab-e1bc-5c3c-8964-d799fbd8391c",
+      "name": "Butterfly Pea Flower Herbal Cooler",
+      "thaiName": "น้ำอัญชันมะนาว",
+      "category": "drinks",
+      "price": 7,
+      "spiceLevel": 0,
+      "dietary": [
+        "Vegan",
+        "Gluten-Free"
+      ],
+      "description": "Naturally vibrant blue butterfly pea flower tea with organic wild honey and fresh squeezed lime juice that magically shifts the color from deep sapphire to royal violet before your eyes.",
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=85",
+      "popular": false,
+      "calories": "120 kcal",
+      "available": true,
+      "hidden": false
+    }
+  ]
+}
