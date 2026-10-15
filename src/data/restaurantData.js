@@ -13,7 +13,7 @@ export const restaurantInfo = {
     { days: "Sunday", lunch: "12:00 PM – 3:30 PM", dinner: "4:30 PM – 9:30 PM" }
   ],
   awards: [
-    { title: "Michelin Guide Selected", year: "2024 & 2025" },
+    { title: "Siam Table Guide: Recommended", org: "Siam Table Guide", year: "2024 & 2025" },
     { title: "Best Thai Restaurant", org: "LA Neighborhood Dining Awards" },
     { title: "Hospitality Excellence Award", org: "Golden Spoon Honors" }
   ]

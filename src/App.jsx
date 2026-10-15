@@ -37,7 +37,7 @@ function App() {
           {/* Complete Categorized Menu with Filters & Search */}
           <MenuSection />
 
-          {/* Michelin Guide & Guest Reviews */}
+          {/* Accolades & Guest Reviews */}
           <ReviewsSection />
 
           {/* Location, Hours, Interactive Map & Parking Info */}
