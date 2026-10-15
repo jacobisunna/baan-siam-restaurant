@@ -9,7 +9,7 @@ export const Hero = () => {
   const headlineAward = restaurantInfo.awards[0];
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-[92vh] flex items-center justify-center pt-[calc(6rem_+_var(--announcement-h,0px))] pb-16 overflow-hidden">
       {/* Background Image with Cinematic Dark Gradient */}
       <div className="absolute inset-0 z-0">
         <img

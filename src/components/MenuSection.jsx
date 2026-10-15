@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useCart } from '../context/CartContext';
-import { categories, menuItems } from '../data/restaurantData';
+import { categories, menuItems, isAvailableNow, laToday, soldOutLabel } from '../data/restaurantData';
 import { 
   Search, 
   Flame, 
@@ -35,6 +35,7 @@ export const MenuSection = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDietary, setSelectedDietary] = useState('all');
   const [selectedSpiceFilter, setSelectedSpiceFilter] = useState('all');
+  const today = laToday();
 
   const dietaryOptions = [
     { id: 'all', label: 'All Dietary' },
@@ -220,10 +221,14 @@ export const MenuSection = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredItems.map((dish) => (
+            {filteredItems.map((dish) => {
+              const soldOut = !isAvailableNow(dish, today);
+              return (
               <div
                 key={dish.id}
-                className="group bg-[#0e1d16] rounded-2xl overflow-hidden border border-stone-800/80 hover:border-[#c59b27]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#c59b27]/10 flex flex-col justify-between"
+                className={`group bg-[#0e1d16] rounded-2xl overflow-hidden border border-stone-800/80 hover:border-[#c59b27]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#c59b27]/10 flex flex-col justify-between ${
+                  soldOut ? 'opacity-70' : ''
+                }`}
               >
                 {/* Food Image with Hover Effect */}
                 <div
@@ -233,7 +238,9 @@ export const MenuSection = () => {
                   <img
                     src={dish.image}
                     alt={dish.name}
-                    className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-500 filter brightness-95 group-hover:brightness-105"
+                    className={`w-full h-full object-cover group-hover:scale-106 transition-transform duration-500 filter brightness-95 group-hover:brightness-105 ${
+                      soldOut ? 'grayscale' : ''
+                    }`}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0e1d16] via-transparent to-black/20" />
@@ -245,8 +252,14 @@ export const MenuSection = () => {
                     </span>
                   </div>
 
-                  {/* Dietary Badge */}
-                  {dish.popular && (
+                  {/* Sold Out / Popular Badge */}
+                  {soldOut ? (
+                    <div className="absolute top-3 left-3 max-w-[70%]">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full bg-stone-950/85 text-stone-100 border border-stone-600 font-bold text-[10px] uppercase tracking-wider shadow">
+                        {soldOutLabel(dish)}
+                      </span>
+                    </div>
+                  ) : dish.popular && (
                     <div className="absolute top-3 left-3">
                       <span className="px-2.5 py-0.5 rounded-full bg-[#c59b27] text-stone-950 font-bold text-[10px] uppercase tracking-wider shadow">
                         Popular
@@ -322,18 +335,28 @@ export const MenuSection = () => {
                       >
                         <Eye className="w-4 h-4" />
                       </button>
-                      <button
-                        onClick={() => addToCart(dish)}
-                        className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#c59b27] to-[#aa771c] hover:brightness-110 active:scale-95 text-stone-950 font-bold text-xs transition-all flex items-center gap-1 shadow-md shadow-[#c59b27]/20 cursor-pointer"
-                      >
-                        <Plus className="w-3.5 h-3.5" />
-                        <span>Add</span>
-                      </button>
+                      {soldOut ? (
+                        <button
+                          disabled
+                          className="px-3.5 py-1.5 rounded-full bg-stone-800 text-stone-400 border border-stone-700 font-bold text-xs flex items-center gap-1 cursor-not-allowed"
+                        >
+                          <span>Sold out</span>
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => addToCart(dish)}
+                          className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#c59b27] to-[#aa771c] hover:brightness-110 active:scale-95 text-stone-950 font-bold text-xs transition-all flex items-center gap-1 shadow-md shadow-[#c59b27]/20 cursor-pointer"
+                        >
+                          <Plus className="w-3.5 h-3.5" />
+                          <span>Add</span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

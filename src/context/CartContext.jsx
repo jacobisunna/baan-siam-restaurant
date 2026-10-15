@@ -1,12 +1,17 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { menuItems, isAvailableNow } from '../data/restaurantData';
 
 const CartContext = createContext();
+
+// A dish can be ordered only while it is on the menu and not sold out.
+const canOrder = (dishId) => isAvailableNow(menuItems.find((dish) => dish.id === dishId));
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
     try {
       const saved = localStorage.getItem('baansiam_cart');
-      return saved ? JSON.parse(saved) : [];
+      // Drop saved items that have since sold out or left the menu.
+      return saved ? JSON.parse(saved).filter((item) => canOrder(item.id)) : [];
     } catch {
       return [];
     }
@@ -25,6 +30,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (item, spiceLevel = null, notes = "") => {
+    if (!canOrder(item.id)) return;
     setCart((prev) => {
       const chosenSpice = spiceLevel !== null ? spiceLevel : item.spiceLevel;
       const cartItemId = `${item.id}-${chosenSpice}-${notes.trim().toLowerCase()}`;
@@ -54,6 +60,7 @@ export const CartProvider = ({ children }) => {
       prev
         .map((item) => {
           if (item.cartItemId === cartItemId) {
+            if (delta > 0 && !canOrder(item.id)) return item;
             const newQty = item.quantity + delta;
             return newQty > 0 ? { ...item, quantity: newQty } : null;
           }
