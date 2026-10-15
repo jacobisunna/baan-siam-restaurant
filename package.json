@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate": "node scripts/validate-data.mjs",
+    "verify": "npm run validate && vite build"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
