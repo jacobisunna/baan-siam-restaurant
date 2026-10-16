@@ -1,4 +1,10 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "now-open-in-thai-town-los-ange-20261015",
+      "message": "Now open in Thai Town, Los Angeles",
+      "tone": "info"
+    }
+  ]
 }
