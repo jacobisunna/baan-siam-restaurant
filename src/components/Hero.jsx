@@ -2,9 +2,12 @@ import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Sparkles, Calendar, Utensils, Heart, Award, Clock } from 'lucide-react';
 import { restaurantInfo } from '../data/restaurantData';
+import { useTheme } from '../context/ThemeContext';
+import { BatIcon } from './HalloweenDecor';
 
 export const Hero = () => {
   const { setIsReservationOpen } = useCart();
+  const { isHalloween } = useTheme();
   // The first award in the data is the headline accolade shown in the hero.
   const headlineAward = restaurantInfo.awards[0];
 
@@ -33,8 +36,11 @@ export const Hero = () => {
 
         {/* Thai Script Watermark / Sub-header */}
         <p className="text-[#c59b27] font-serif text-lg sm:text-2xl tracking-[0.25em] uppercase mb-2 font-light">
-          {restaurantInfo.thaiName} · Welcome to Siam
+          {restaurantInfo.thaiName} · {isHalloween ? 'Happy Halloween' : 'Welcome to Siam'}
         </p>
+        {isHalloween && (
+          <BatIcon className="w-10 h-5 mx-auto mb-3 text-[#ff7a1a] opacity-80" />
+        )}
 
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-6">

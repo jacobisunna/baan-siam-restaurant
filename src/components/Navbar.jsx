@@ -11,9 +11,12 @@ import {
   MapPin
 } from 'lucide-react';
 import { restaurantInfo } from '../data/restaurantData';
+import { useTheme } from '../context/ThemeContext';
+import { PumpkinIcon } from './HalloweenDecor';
 
 export const Navbar = () => {
   const { totalItems, setIsCartOpen, setIsReservationOpen } = useCart();
+  const { isSeason, isHalloween, toggleHalloween } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -82,6 +85,24 @@ export const Navbar = () => {
               <Phone className="w-3.5 h-3.5 text-[#c59b27]" />
               <span>{restaurantInfo.phone}</span>
             </a>
+
+            {/* Halloween theme switch (only during the season) */}
+            {isSeason && (
+              <button
+                type="button"
+                onClick={toggleHalloween}
+                aria-pressed={isHalloween}
+                className={`p-2.5 rounded-full border transition-all cursor-pointer ${
+                  isHalloween
+                    ? 'bg-[#2a1238] border-[#ff7a1a]/60 text-[#ff7a1a] hover:border-[#ff7a1a]'
+                    : 'bg-[#12281e] border-stone-700/60 text-stone-400 hover:text-stone-200'
+                }`}
+                title={isHalloween ? 'Halloween theme: on (tap to turn off)' : 'Halloween theme: off (tap to turn on)'}
+                aria-label="Halloween theme"
+              >
+                <PumpkinIcon className="w-5 h-5" />
+              </button>
+            )}
 
             {/* Table Reservation Button */}
             <button

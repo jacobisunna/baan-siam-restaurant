@@ -1,5 +1,6 @@
 import React from 'react';
 import { CartProvider } from './context/CartContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { AnnouncementBar } from './components/AnnouncementBar';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -13,50 +14,56 @@ import { Footer } from './components/Footer';
 import { DishDetailModal } from './components/DishDetailModal';
 import { ReservationModal } from './components/ReservationModal';
 import { CartDrawer } from './components/CartDrawer';
+import { HalloweenDecor } from './components/HalloweenDecor';
 
 function App() {
   return (
-    <CartProvider>
-      <div className="min-h-screen bg-[#0c1410] text-stone-200 selection:bg-[#c59b27] selection:text-black flex flex-col">
-        {/* Fixed header: RestaurantBot announcements above the luxury Navigation Bar */}
-        <div className="fixed top-0 left-0 right-0 z-40">
-          <AnnouncementBar />
-          <Navbar />
+    <ThemeProvider>
+      <CartProvider>
+        <div className="min-h-screen bg-[#0c1410] text-stone-200 selection:bg-[#c59b27] selection:text-black flex flex-col">
+          {/* Fixed header: RestaurantBot announcements above the luxury Navigation Bar */}
+          <div className="fixed top-0 left-0 right-0 z-40">
+            <AnnouncementBar />
+            <Navbar />
+          </div>
+
+          {/* Main Content Area */}
+          <main className="flex-1">
+            {/* Hero Section */}
+            <Hero />
+
+            {/* Our Story & Culinary Heritage */}
+            <StorySection />
+
+            {/* Smiling Servers & Warm Hospitality */}
+            <HospitalitySection />
+
+            {/* Chef's Royal Signatures */}
+            <ChefSpecials />
+
+            {/* Complete Categorized Menu with Filters & Search */}
+            <MenuSection />
+
+            {/* Accolades & Guest Reviews */}
+            <ReviewsSection />
+
+            {/* Location, Hours, Interactive Map & Parking Info */}
+            <LocationHours />
+          </main>
+
+          {/* Luxury Footer */}
+          <Footer />
+
+          {/* Global Modals & Drawers */}
+          <DishDetailModal />
+          <ReservationModal />
+          <CartDrawer />
+
+          {/* Seasonal decorations, only while the Halloween theme is on */}
+          <HalloweenDecor />
         </div>
-
-        {/* Main Content Area */}
-        <main className="flex-1">
-          {/* Hero Section */}
-          <Hero />
-
-          {/* Our Story & Culinary Heritage */}
-          <StorySection />
-
-          {/* Smiling Servers & Warm Hospitality */}
-          <HospitalitySection />
-
-          {/* Chef's Royal Signatures */}
-          <ChefSpecials />
-
-          {/* Complete Categorized Menu with Filters & Search */}
-          <MenuSection />
-
-          {/* Accolades & Guest Reviews */}
-          <ReviewsSection />
-
-          {/* Location, Hours, Interactive Map & Parking Info */}
-          <LocationHours />
-        </main>
-
-        {/* Luxury Footer */}
-        <Footer />
-
-        {/* Global Modals & Drawers */}
-        <DishDetailModal />
-        <ReservationModal />
-        <CartDrawer />
-      </div>
-    </CartProvider>
+      </CartProvider>
+    </ThemeProvider>
   );
 }
 

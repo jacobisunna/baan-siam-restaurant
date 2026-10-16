@@ -57,3 +57,180 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d4af37;
 }
+
+/* ------------------------------------------------------------------
+   Halloween theme: active while <html> has .theme-halloween (see
+   src/context/ThemeContext.jsx). It recolors the gold accents to
+   pumpkin orange and the emerald surfaces to midnight purple by
+   matching the components' arbitrary color classes, so the
+   components keep their usual markup. Leading-space / ^= selectors
+   match only the plain class, never hover:, after: or selection:.
+   ------------------------------------------------------------------ */
+html.theme-halloween body {
+  background-color: #0d0a12;
+}
+
+html.theme-halloween ::selection {
+  background-color: #ff7a1a;
+  color: #000;
+}
+
+html.theme-halloween ::-webkit-scrollbar-track {
+  background: #0d0a12;
+}
+html.theme-halloween ::-webkit-scrollbar-thumb {
+  background: #3a1c50;
+}
+html.theme-halloween ::-webkit-scrollbar-thumb:hover {
+  background: #ff7a1a;
+}
+
+html.theme-halloween .gold-gradient-text {
+  background: linear-gradient(135deg, #ffd29a 0%, #ff8a1f 50%, #d9480f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html.theme-halloween .gold-border {
+  border-color: rgba(255, 122, 26, 0.35);
+}
+html.theme-halloween .gold-glow {
+  box-shadow: 0 0 25px rgba(255, 122, 26, 0.2);
+}
+
+/* Gold text and accents become pumpkin orange */
+html.theme-halloween [class*=" text-[#c59b27]"],
+html.theme-halloween [class^="text-[#c59b27]"] {
+  color: #ff7a1a;
+}
+html.theme-halloween [class*=" text-[#f3e5ab]"],
+html.theme-halloween [class^="text-[#f3e5ab]"] {
+  color: #ffd2a1;
+}
+html.theme-halloween [class*="hover:text-[#c59b27]"]:hover,
+html.theme-halloween .group:hover [class*="group-hover:text-[#c59b27]"] {
+  color: #ff7a1a;
+}
+html.theme-halloween [class*="hover:text-[#f3e5ab]"]:hover,
+html.theme-halloween .group:hover [class*="group-hover:text-[#f3e5ab]"] {
+  color: #ffd2a1;
+}
+
+html.theme-halloween [class*=" bg-[#c59b27]"],
+html.theme-halloween [class^="bg-[#c59b27]"] {
+  background-color: #ff7a1a;
+}
+html.theme-halloween [class*=" bg-[#c59b27]/"],
+html.theme-halloween [class^="bg-[#c59b27]/"] {
+  background-color: rgba(255, 122, 26, 0.12);
+}
+html.theme-halloween [class*=" bg-[#f3e5ab]"],
+html.theme-halloween [class^="bg-[#f3e5ab]"] {
+  background-color: #ffd2a1;
+}
+html.theme-halloween [class*="hover:bg-[#c59b27]"]:hover {
+  background-color: #ff7a1a;
+}
+html.theme-halloween [class*="after:bg-[#c59b27]"]::after,
+html.theme-halloween [class*="before:bg-[#c59b27]"]::before {
+  background-color: #ff7a1a;
+}
+
+html.theme-halloween [class*=" border-[#c59b27]"],
+html.theme-halloween [class^="border-[#c59b27]"],
+html.theme-halloween [class*=" border-[#aa771c]"],
+html.theme-halloween [class^="border-[#aa771c]"] {
+  border-color: rgba(255, 122, 26, 0.45);
+}
+html.theme-halloween [class*="hover:border-[#c59b27]"]:hover {
+  border-color: #ff7a1a;
+}
+
+html.theme-halloween [class*="shadow-[#c59b27]"] {
+  --tw-shadow-color: rgba(255, 122, 26, 0.25);
+}
+
+/* Gold buttons and badges: a pumpkin gradient */
+html.theme-halloween [class*="from-[#c59b27]"] {
+  --tw-gradient-from: #ff8a1f;
+}
+html.theme-halloween [class*="to-[#aa771c]"] {
+  --tw-gradient-to: #d9480f;
+}
+
+/* Emerald surfaces become midnight purple (dark colors start #0, #1 or #2) */
+html.theme-halloween [class*=" bg-[#0"],
+html.theme-halloween [class^="bg-[#0"] {
+  background-color: rgba(20, 12, 28, 0.92);
+}
+html.theme-halloween [class*=" bg-[#1"],
+html.theme-halloween [class^="bg-[#1"] {
+  background-color: rgba(38, 18, 52, 0.85);
+}
+html.theme-halloween [class*=" bg-[#2"],
+html.theme-halloween [class^="bg-[#2"] {
+  background-color: rgba(50, 24, 68, 0.85);
+}
+html.theme-halloween [class~="bg-[#0c1410]"] {
+  background-color: #0d0a12;
+}
+html.theme-halloween [class*="hover:bg-[#0"]:hover,
+html.theme-halloween [class*="hover:bg-[#1"]:hover,
+html.theme-halloween [class*="hover:bg-[#2"]:hover {
+  background-color: rgba(62, 30, 84, 0.95);
+}
+
+/* Emerald gradients (hero, header, cards, footer) */
+html.theme-halloween [class~="from-[#0c1410]"] { --tw-gradient-from: #0d0a12; }
+html.theme-halloween [class~="to-[#0c1410]"] { --tw-gradient-to: #0d0a12; }
+html.theme-halloween [class~="via-[#0c1410]/70"] { --tw-gradient-via: rgba(13, 10, 18, 0.7); }
+html.theme-halloween [class~="via-[#0c1410]/50"] { --tw-gradient-via: rgba(13, 10, 18, 0.5); }
+html.theme-halloween [class~="to-[#081812]/80"] { --tw-gradient-to: rgba(22, 10, 32, 0.8); }
+html.theme-halloween [class~="from-[#081812]/90"] { --tw-gradient-from: rgba(16, 8, 24, 0.9); }
+html.theme-halloween [class~="via-[#081812]/50"] { --tw-gradient-via: rgba(16, 8, 24, 0.5); }
+html.theme-halloween [class~="from-[#0e1d16]"] { --tw-gradient-from: #170d20; }
+html.theme-halloween [class~="from-[#12281e]"] { --tw-gradient-from: #22102e; }
+html.theme-halloween [class~="to-[#12281e]"] { --tw-gradient-to: #22102e; }
+html.theme-halloween [class~="via-[#0f2118]"] { --tw-gradient-via: #160b20; }
+html.theme-halloween [class~="from-[#0e2419]"] { --tw-gradient-from: #1c0d27; }
+html.theme-halloween [class~="to-[#0e2419]"] { --tw-gradient-to: #1c0d27; }
+html.theme-halloween [class~="via-[#091b12]"] { --tw-gradient-via: #10081a; }
+
+/* Decorations from src/components/HalloweenDecor.jsx */
+.halloween-moon {
+  position: absolute;
+  top: 6rem;
+  right: -6rem;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(255, 170, 80, 0.16) 0%, rgba(255, 122, 26, 0.06) 45%, transparent 70%);
+}
+
+.halloween-bat {
+  position: absolute;
+  left: -4rem;
+  color: rgba(10, 6, 14, 0.85);
+  filter: drop-shadow(0 0 6px rgba(255, 122, 26, 0.35));
+  animation-name: halloween-bat-flight;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes halloween-bat-flight {
+  0% { transform: translate(0, 0) scaleY(1); }
+  10% { transform: translate(12vw, -2vh) scaleY(0.6); }
+  20% { transform: translate(24vw, 1vh) scaleY(1); }
+  30% { transform: translate(36vw, -3vh) scaleY(0.6); }
+  40% { transform: translate(48vw, 0) scaleY(1); }
+  50% { transform: translate(60vw, -2vh) scaleY(0.6); }
+  60% { transform: translate(72vw, 2vh) scaleY(1); }
+  70% { transform: translate(84vw, -1vh) scaleY(0.6); }
+  80% { transform: translate(96vw, 1vh) scaleY(1); }
+  100% { transform: translate(115vw, -2vh) scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halloween-bat {
+    display: none;
+  }
+}
