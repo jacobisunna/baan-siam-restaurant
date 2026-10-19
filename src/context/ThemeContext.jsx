@@ -5,7 +5,7 @@ import { isWithinDates } from '../data/restaurantData';
 // theme to every guest by default, false turns it off for everyone. It only runs inside its
 // LA date window. The pumpkin button in the navigation lets a visitor flip it on their own screen.
 export const HALLOWEEN_THEME = {
-  enabled: true,
+  enabled: false,
   startDate: '2026-10-01',
   endDate: '2026-10-31',
 };
